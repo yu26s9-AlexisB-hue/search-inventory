@@ -1,22 +1,23 @@
 package com.pluralsight;
 
-public class Inventory {
+public class Product {
     private int Id;
     private String Item;
     private double price;
 
-    public Inventory(int id, String item, double price) {
-        Id = id;
-        Item = item;
+    public Product(int id, String item, double price) {
+        this.Id = id;
+        this.Item = item;
         this.price = price;
     }
 
+
     public int getId() {
-        return Id;
+        return this.Id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.Id = id;
     }
 
     public String getItem() {
@@ -34,5 +35,4 @@ public class Inventory {
     public void setPrice(double price) {
         this.price = price;
     }
-    
 }
