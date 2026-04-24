@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.models;
+
+import java.util.regex.Pattern;
 
 public class Product {
     private int Id;
@@ -9,6 +11,15 @@ public class Product {
         this.Id = id;
         this.Item = item;
         this.price = price;
+    }
+
+    //Splits apart each line and making sense of the information
+    public Product(String line){
+        String[] parts = line.split(Pattern.quote("|"));
+        this.Id = Integer.parseInt(parts[0]);
+        this.Item = parts[1];
+        this.price = Double.parseDouble(parts[2]);
+
     }
 
 
